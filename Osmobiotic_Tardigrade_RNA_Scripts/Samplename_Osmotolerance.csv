@@ -1,0 +1,7 @@
+﻿NO,SampleID,Group,Experiment,Duration,Control,Osmobiosis,Thawing_Date,Extractor,Nr_Specimens,Extraction_Date
+1,T_1,Ctl,Osmobiosis,24h,Control_Os-Rep1,NA,1-Nov-21,Napat,260,8-Dec-21
+2,T_2,Ctl,Osmobiosis,24h,Control_Os-Rep2,NA,6-Sep-21,Napat,320,10-Dec-21
+3,T_3,Ctl,Osmobiosis,24h,Control_Os-Rep3,NA,6-Sep-2021  + 1-Nov-2021,Napat,285,15-Dec-21
+4,T_4,Exp,Osmobiosis,24h,NA,Ex_Os-Rep1,6-Sep-2021  + 1-Nov-2021,Napat,213,26-Nov-21
+5,T_5,Exp,Osmobiosis,24h,NA,Ex_Os-Rep2,6-Sep-21,Napat,220,1-Dec-21
+6,T_6,Exp,Osmobiosis,24h,NA,Ex_Os-Rep3,1-Nov-21,Napat,240,3-Dec-21
