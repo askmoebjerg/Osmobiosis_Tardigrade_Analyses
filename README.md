@@ -2,7 +2,7 @@
 The following contains a collection of scripts used to perform differential gene expression analyses on Tardigrade RNA data derived from osmobiosis experiments. 
 
 ## Pipeline
-The scripts used for the analyses can be found in `Osmobiotic_Tardigrade_RNA_Scripts` 
+The scripts used for the analyses can be found in `Osmobiotic_Tardigrade_RNA_Scripts`   
 The latter includes:
 - Initial quality assessment of the sequencing data by running FastQC on the "CLEAN" reads
 - Run Salmon to quantify the number of read counts 
