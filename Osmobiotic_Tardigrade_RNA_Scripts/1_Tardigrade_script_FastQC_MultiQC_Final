@@ -1,0 +1,21 @@
+###################
+# Analyses
+###################
+
+#data directory
+raw_data=/corefac/cbp/tardigrades_project/BGI_data
+out_direc=/corefac/cbp/tardigrades_project/analysis
+
+cat Tardigrade_Sample_List | while read LINES
+do
+	PrefixName=`echo $LINES`
+	echo $PrefixName
+
+# run FastQC on the data
+	mkdir -p $out_direc/FastQC/$PrefixName
+	cd $raw_data/$PrefixName
+	file=`ls -a $PrefixName.pair*.gz | sort`
+	fastqc -t 2 $PrefixName"_1".fq $PrefixName"_2".fq -o $out_direc/FastQC/$PrefixName
+
+
+done
