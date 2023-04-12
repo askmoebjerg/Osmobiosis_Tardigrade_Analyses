@@ -128,17 +128,10 @@ plotCounts(dds, gene=which.min(res_Ctl24h_Exp24h$padj), intgroup="group")
 
 #Plot log-fold change against log-counts per million, with DE genes highlighted:
 dev.off()
-order_res_mean <- res_Ctl24h_Exp24h[order(res_Ctl24h_Exp24h$baseMean),]
+order_res_mean <- res[order(res$baseMean),]
  
-DESeq2::plotMA(order_res_mean, main = "MA-Plot Osmobiosis 24h", ylim = c(-4, 4), hl.col= c("blue","red"))
-
-resG <- results(dds, lfcThreshold=0, altHypothesis="greater")
-resL <- results(dds, lfcThreshold=0, altHypothesis="less")
-resG <- results(dds, contrast=c("group", "Exp_Osmobiosis_24h","Ctl_Osmobiosis_24h"), alpha=0.05,altHypothesis="greater") 
-
-DESeq2::plotMA(resG, ylim=c(-4, 4),)
-points(resL$log2FoldChange)
-DESeq2::plotMA(resL, ylim=c(-4, 4), sigCol)
+DESeq2::plotMA(res, ylim = c(-4, 4), cex=0.35, colSig = ifelse(abs(res$log2FoldChange) > 1, "red","blue"), ylab = expression("log"[2]*"FC"), xlab = "Mean of normalized counts")
+abline(h=c(-1,1), lty=2)
 
 
 ############################# 
